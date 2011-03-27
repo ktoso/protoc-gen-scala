@@ -1,3 +1,11 @@
+# build folders
 out
-*.class
 doc
+dist
+build
+.gradle
+
+# temp files
+*.tmp
+*~
+*.bak

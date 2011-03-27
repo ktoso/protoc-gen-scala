@@ -1,0 +1,3 @@
+#!/bin/sh
+cd `dirname $0`
+java -jar protoc-gen-scala-1.0.0.jar

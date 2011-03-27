@@ -19,7 +19,7 @@ class EndToEndTestScala extends AssertionsForJUnit {
 
   var mainRunner: MainRunner = new MainRunner
 
-  var protoInFilePath: String = "src/test/proto/pl/project13/test/test_proto.proto"
+  var protoInFilePath: String = "src/test/proto/test/test.proto"
   var outFilePath    : String = "src/test/resources/pl/project13/test/test_proto.out"
 
   @Before def setUp() {
@@ -40,7 +40,6 @@ class EndToEndTestScala extends AssertionsForJUnit {
     val codeGeneratorResponse: Plugin.CodeGeneratorResponse = Plugin.CodeGeneratorResponse.parseFrom(inputStream)
     val errorMessage = codeGeneratorResponse.getError()
 
-    logger.info("errorMessage was: " + errorMessage)
     assert(errorMessage === "Not yet implemented :-)")
   }
 }

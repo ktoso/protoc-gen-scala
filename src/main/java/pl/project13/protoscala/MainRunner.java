@@ -24,11 +24,11 @@ public class MainRunner {
   }
 
   public void run() throws IOException {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-    while(reader.ready()){
-      String line = reader.readLine();
-      System.out.println(line);
-    }
+//    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+//    while(reader.ready()){
+//      String line = reader.readLine();
+//      System.out.println(line);
+//    }
 
     Plugin.CodeGeneratorRequest codeGeneratorRequest = Plugin.CodeGeneratorRequest.parseFrom(in);
 

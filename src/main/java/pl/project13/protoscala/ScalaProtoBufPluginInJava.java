@@ -4,6 +4,7 @@ import google.protobuf.compiler.Plugin;
 
 import java.io.File;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Date: 3/27/11
@@ -11,6 +12,8 @@ import java.util.List;
  * @author Konrad Malawski
  */
 public class ScalaProtoBufPluginInJava {
+
+  Logger log = Logger.getLogger(getClass().getSimpleName());
 
   public Plugin.CodeGeneratorResponse handle(Plugin.CodeGeneratorRequest generatorRequest) {
     Plugin.CodeGeneratorResponse.Builder responseBuilder = Plugin.CodeGeneratorResponse.newBuilder().setError("Not yet implemented :-)");
@@ -25,7 +28,7 @@ public class ScalaProtoBufPluginInJava {
   private void createFolders(List<String> fileNames) {
     for (String fileName : fileNames) {
       File file = new File(fileName);
-      System.out.println(file);
+      log.info("Creating folders for: " + file);
     }
   }
 }

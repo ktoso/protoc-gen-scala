@@ -3,7 +3,7 @@
  * @author Konrad Malawski
  */
 
-package pl.project13.test;
+package test;
 
 option java_package = "pl.project13.test";
 
