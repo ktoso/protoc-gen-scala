@@ -1,8 +1,8 @@
 package pl.project13.protoscala;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.protobuf.ByteString;
 import google.protobuf.compiler.Plugin;
+import pl.project13.protoscala.gen.ScalaProtoBufPluginInJava;
 
 import java.io.*;
 
