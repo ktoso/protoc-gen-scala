@@ -27,7 +27,7 @@ public class ScalaProtoBufPluginInJava {
 
     try {
       // todo the app's heart and soul
-      for (DescriptorProtos.FileDescriptorProtoOrBuilder protoFile : request.getProtoFileOrBuilderList()) {
+      for (DescriptorProtos.FileDescriptorProto protoFile : request.getProtoFileList()) {
         log.info("handleOneProtoFile: name: " + protoFile.getName() + ", package: " + protoFile.getPackage());
         handleOneProtoFile(responseBuilder, protoFile);
       }
@@ -49,6 +49,8 @@ public class ScalaProtoBufPluginInJava {
 
     handleDependencies(protoFile);
 
+    handleClassBody(protoFile);
+
     fileBuilder.setContent(sourceStringBuilder.toString());
     fileBuilder.setName(nameManglerNameMangler.escapeFileName("TestFile"));
 
@@ -65,11 +67,70 @@ public class ScalaProtoBufPluginInJava {
   }
 
   private void handleDependencies(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
-    // todo that's wrong ;-)
+    // todo that's most probably wrong ;-)
     for (String dependency : protoFile.getDependencyList()) {
       log.info("Add dependency + " + dependency);
       sourceStringBuilder.append("import ").append(dependency);
     }
+  }
+
+  /**
+   *   todo this will have a better architecture (a waaaay batter one, I'm just looking at what we have to code against :-))
+   */
+  private void handleClassBody(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+    //todo fix this, inner loops suck
+
+    for (DescriptorProtos.DescriptorProto descriptorProto : protoFile.getMessageTypeList()) {
+      // handle all fields
+      for (DescriptorProtos.FieldDescriptorProto fieldDescriptorProto : descriptorProto.getFieldList()) {
+        handleField(fieldDescriptorProto, protoFile);
+      }
+
+      // handle enum types
+      for (DescriptorProtos.EnumDescriptorProto enumDescriptor : descriptorProto.getEnumTypeList()) {
+        handleEnumType(enumDescriptor, protoFile);
+      }
+
+      // handle nested types
+      // todo this would be generated inner classes etc, hm...
+      for (DescriptorProtos.DescriptorProto nestedType : descriptorProto.getNestedTypeList()) {
+        handleNestedType(sourceStringBuilder, nestedType); // for example like this
+      }
+
+      // handle extensions
+      // todo maybe latter on
+      for (DescriptorProtos.FieldDescriptorProto fieldDescriptorProto : descriptorProto.getExtensionList()) {
+        handleExtension(fieldDescriptorProto, protoFile);
+      }
+
+      // handle extension ranges
+      // todo maybe latter on
+      for (DescriptorProtos.DescriptorProto.ExtensionRange extensionRange : descriptorProto.getExtensionRangeList()) {
+        handleExtensionRange(extensionRange, protoFile); //todo not sure what "extension range" is for now
+      }
+    }
+    String name = protoFile.getName();
+    sourceStringBuilder.append("case class ").append(name); // todo possibly encapsulate this
+  }
+
+  private void handleNestedType(SourceStringBuilder sourceStringBuilder, DescriptorProtos.DescriptorProto nestedType) {
+    // todo handle this with THIS class? Rename it to Type generator maybe etc?
+  }
+
+  private void handleExtensionRange(DescriptorProtos.DescriptorProto.ExtensionRange extensionRange, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+    //todo handle me (use *FieldGenerator)
+  }
+
+  private void handleExtension(DescriptorProtos.FieldDescriptorProto fieldDescriptorProto, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+    //todo handle me (use *FieldGenerator)
+  }
+
+  private void handleEnumType(DescriptorProtos.EnumDescriptorProto enumDescriptor, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+    //todo handle me (use *FieldGenerator)
+  }
+
+  private void handleField(DescriptorProtos.FieldDescriptorProto fieldDescriptorProto, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+    //todo handle me (use *FieldGenerator)
   }
 
 }
