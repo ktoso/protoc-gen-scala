@@ -61,7 +61,6 @@ public class ScalaProtoBufPluginInJava {
   private void handlePackage(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     String javaPackage = protoFile.getOptions().getJavaPackage();
     sourceStringBuilder.append("package ").append(javaPackage);
-    sourceStringBuilder.append("package ").append(javaPackage);
   }
 
   private void handleComments(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
