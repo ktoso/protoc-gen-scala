@@ -18,7 +18,7 @@ class ScalaNameMangler {
                       "true"     :: "with"      :: "<:"       :: "class"   :: "false"     ::
                       "this"     :: "type"      :: "yield"    :: "<%"      :: ">:"        ::
                       "def"      :: "final"     :: "implicit" :: "null"    :: "protected" ::
-                      "throw"    :: "val"       :: "#"        :: "@"       :: Nill
+                      "throw"    :: "val"       :: "#"        :: "@"       :: Nil
 
 
   val fileNameExt = ".scala"

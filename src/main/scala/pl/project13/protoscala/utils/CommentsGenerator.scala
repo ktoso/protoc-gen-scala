@@ -1,7 +1,6 @@
 package pl.project13.protoscala.utils
 
 import com.google.protobuf.DescriptorProtos
-import java.lang._
 
 /**
  * Date: 3/28/11

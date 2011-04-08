@@ -1208,7 +1208,7 @@ public final class Plugin {
         return Builder.create();
       }
 
-      public Builder newBuilderForType() {
+      public CodeGeneratorResponse.File.Builder newBuilderForType() {
         return newBuilder();
       }
 
@@ -1221,9 +1221,8 @@ public final class Plugin {
       }
 
       @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
+      protected CodeGeneratorResponse.Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        CodeGeneratorResponse.Builder builder = new CodeGeneratorResponse.Builder(parent);
         return builder;
       }
 
