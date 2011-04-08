@@ -1,4 +1,10 @@
-# build folders
+# sbt folders
+target/
+lib_managed/
+src_managed/
+project/boot/
+
+# other build / project folders
 out
 doc
 dist

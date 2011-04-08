@@ -42,7 +42,9 @@ public class ScalaProtoBufPluginInJava {
   private void handleOneProtoFile(Plugin.CodeGeneratorResponse.Builder responseBuilder, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     Plugin.CodeGeneratorResponse.File.Builder fileBuilder = Plugin.CodeGeneratorResponse.File.getDefaultInstance().newBuilderForType();
 
-    commentsGenerator.initialComment(sourceStringBuilder, protoFile);
+    handleComments(protoFile);
+
+    handlePackage(protoFile);
 
     // todo that's wrong ;-)
     handleDependencies(protoFile);
@@ -54,6 +56,15 @@ public class ScalaProtoBufPluginInJava {
     fileBuilder.setName(nameManglerNameMangler.escapeFileName("TestFile"));
 
     responseBuilder.addFile(fileBuilder.build());
+  }
+
+  private void handlePackage(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+    String javaPackage = protoFile.getOptions().getJavaPackage();
+    sourceStringBuilder.append("package ").append(javaPackage);
+  }
+
+  private void handleComments(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+    commentsGenerator.initialComment(sourceStringBuilder, protoFile);
   }
 
   private void handleDependencies(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
