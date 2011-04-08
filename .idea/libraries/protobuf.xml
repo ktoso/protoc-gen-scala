@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="protobuf">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="http://code.google.com/apis/protocolbuffers/docs/reference/java/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/doc/protobuf-2.4.0a/java/src/test/java" />
+      <root url="file://$PROJECT_DIR$/doc/protobuf-2.4.0a/java/src/main/java" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+  </library>
+</component>
