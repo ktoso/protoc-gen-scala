@@ -47,15 +47,12 @@ public class ScalaProtoBufPluginInJava {
 
     handlePackage(protoFile);
 
-    // todo that's wrong ;-)
     handleDependencies(protoFile);
-
-    DescriptorProtos.FileOptions options = protoFile.getOptions();
 
     fileBuilder.setContent(sourceStringBuilder.toString());
     fileBuilder.setName(nameManglerNameMangler.escapeFileName("TestFile"));
 
-    responseBuilder.addFile(fileBuilder.build());
+    responseBuilder.addFile(fileBuilder);
   }
 
   private void handlePackage(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
