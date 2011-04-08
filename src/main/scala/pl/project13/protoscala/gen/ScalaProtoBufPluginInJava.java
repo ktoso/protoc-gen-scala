@@ -4,6 +4,7 @@ import com.google.protobuf.DescriptorProtos;
 import google.protobuf.compiler.Plugin;
 import pl.project13.protoscala.utils.CommentsGenerator;
 import pl.project13.protoscala.utils.ScalaNameMangler;
+import pl.project13.protoscala.utils.SourceStringBuilder;
 
 import java.util.logging.Logger;
 
@@ -16,7 +17,7 @@ public class ScalaProtoBufPluginInJava {
 
   Logger log = Logger.getLogger(getClass().getSimpleName());
 
-  private StringBuilder sourceStringBuilder = new StringBuilder(); // todo may get more specialized?
+  private SourceStringBuilder sourceStringBuilder = new SourceStringBuilder(); // todo may get more specialized?
 
   private ScalaNameMangler  nameManglerNameMangler = new ScalaNameMangler();
   private CommentsGenerator commentsGenerator      = new CommentsGenerator();
@@ -60,6 +61,7 @@ public class ScalaProtoBufPluginInJava {
 
   private void handlePackage(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     String javaPackage = protoFile.getOptions().getJavaPackage();
+    sourceStringBuilder.append("package ").append(javaPackage);
     sourceStringBuilder.append("package ").append(javaPackage);
   }
 
