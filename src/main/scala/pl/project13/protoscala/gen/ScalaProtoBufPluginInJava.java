@@ -51,7 +51,6 @@ public class ScalaProtoBufPluginInJava {
     handleDependencies(protoFile);
 
     DescriptorProtos.FileOptions options = protoFile.getOptions();
-    String javaPackage = options.getJavaPackage(); // todo how do I set the file's output package? hmm
 
     fileBuilder.setContent(sourceStringBuilder.toString());
     fileBuilder.setName(nameManglerNameMangler.escapeFileName("TestFile"));
