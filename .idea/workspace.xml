@@ -14,10 +14,7 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4284cb17-36ce-4fc6-b13b-4c12ec165d1c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/runExample.sh" afterPath="$PROJECT_DIR$/src/main/resources/runExample.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" afterPath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" />
-    </list>
+    <list default="true" id="4284cb17-36ce-4fc6-b13b-4c12ec165d1c" name="Default" comment="" />
     <ignored path="akka-and-protobuf.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,19 +82,57 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScalaProtoBufPluginInJava.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ScalaProtoBufPluginInJava.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="25" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0">
+            <state line="69" column="32" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.23963134">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageFieldGenerator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/MessageFieldGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="21" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="runExample.sh" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RepeatedFieldGenerator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/RepeatedFieldGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="2" selection-start="132" selection-end="151" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainRunner.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/MainRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="81" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SourceStringBuilder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="11" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runExample.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/runExample.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="23" selection-end="23" vertical-scroll-proportion="0.03382187">
+            <state line="2" column="12" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,7 +141,7 @@
       <file leaf-file-name="CommentsGenerator.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="4" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+            <state line="12" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -144,9 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/ExampleCase.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/com/google/protobuf/DescriptorProtos.java" />
-        <option value="$PROJECT_DIR$/src/main/proto/google/protobuf/descriptor.proto" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/CakePattern.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/di/ComponentRegistry.scala" />
@@ -155,11 +187,14 @@
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/ScalaNameMangler.scala" />
         <option value="$PROJECT_DIR$/project/build/Project.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/pl/project13/protoscala/EndToEndTestScala.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufCodeGenerator.scala" />
         <option value="$PROJECT_DIR$/src/main/java/google/protobuf/compiler/Plugin.java" />
-        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" />
         <option value="$PROJECT_DIR$/src/main/resources/runExample.sh" />
+        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/RepeatedFieldGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/MessageFieldGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" />
       </list>
     </option>
   </component>
@@ -240,14 +275,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -263,7 +290,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project13" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protoscala" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,6 +341,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="protoscala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,28 +383,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="akka-and-protobuf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protoc-gen-scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,6 +453,7 @@
       <recent name="pl.project13.protoscala" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.project13.protoscala.gen" />
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -435,8 +461,8 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="pl.project13.protoscala.gen" />
       <recent name="pl.project13.protoscala.utils" />
+      <recent name="pl.project13.protoscala.gen" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pl.project13.protoscala.utils" />
@@ -684,7 +710,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing scala problems ;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="outline for code generation" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -700,6 +726,10 @@
     <MESSAGE value="yay, skeleton ready ;-)" />
     <MESSAGE value="yay scala keywords" />
     <MESSAGE value="fixing scala problems ;)" />
+    <MESSAGE value="some minor work and and adding SourceStringBuilder" />
+    <MESSAGE value="hah removed useless line of code" />
+    <MESSAGE value="small fixes, cant get used to intellij after a lot of vim hacking I guess.... :)" />
+    <MESSAGE value="outline for code generation" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -777,11 +807,6 @@
         <state line="61" column="55" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/google/protobuf/DescriptorProtos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="722" column="28" selection-start="24594" selection-end="24594" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/proto/google/protobuf/descriptor.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="0" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.0" />
@@ -799,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="4" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/google/protobuf/compiler/Plugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1224" column="101" selection-start="41541" selection-end="41541" vertical-scroll-proportion="0.0">
@@ -813,17 +831,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/runExample.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="25" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0">
+        <state line="2" column="12" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/runExample.sh">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="23" selection-end="23" vertical-scroll-proportion="0.03382187">
+        <state line="15" column="11" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/google/protobuf/DescriptorProtos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="572" column="14" selection-start="21907" selection-end="21907" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/MainRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="81" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/RepeatedFieldGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="132" selection-end="151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/MessageFieldGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="21" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="32" selection-start="2598" selection-end="2598" vertical-scroll-proportion="0.23963134">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
