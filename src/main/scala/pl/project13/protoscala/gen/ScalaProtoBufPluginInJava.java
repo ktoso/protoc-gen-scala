@@ -47,7 +47,7 @@ public class ScalaProtoBufPluginInJava {
   private void handleOneProtoFile(Plugin.CodeGeneratorResponse.Builder responseBuilder, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     Plugin.CodeGeneratorResponse.File.Builder fileBuilder = Plugin.CodeGeneratorResponse.File.getDefaultInstance().newBuilderForType();
 
-    handleComments(protoFile);
+    handleInitialComments(protoFile);
 
     handlePackage(protoFile);
 
@@ -64,13 +64,13 @@ public class ScalaProtoBufPluginInJava {
     responseBuilder.addFile(fileBuilder);
   }
 
+  private void handleInitialComments(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+    commentsGenerator.initialComment(sourceStringBuilder, protoFile);
+  }
+
   private void handlePackage(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     String javaPackage = protoFile.getOptions().getJavaPackage();
     sourceStringBuilder.declarePackage(javaPackage);
-  }
-
-  private void handleComments(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
-    commentsGenerator.initialComment(sourceStringBuilder, protoFile);
   }
 
   private void handleDependencies(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
@@ -89,7 +89,8 @@ public class ScalaProtoBufPluginInJava {
 
     for (DescriptorProtos.DescriptorProto descriptorProto : protoFile.getMessageTypeList()) {
 
-      sourceStringBuilder.append("case class ").append(descriptorProto.getName()).append("()");
+      // declare class
+      handleClassDeclaration(descriptorProto);
 
       // handle all fields
       for (DescriptorProtos.FieldDescriptorProto fieldDescriptorProto : descriptorProto.getFieldList()) {
@@ -108,19 +109,23 @@ public class ScalaProtoBufPluginInJava {
       }
 
       // handle extensions
-      // todo maybe latter on
+      // todo maybe later on
       for (DescriptorProtos.FieldDescriptorProto fieldDescriptorProto : descriptorProto.getExtensionList()) {
         handleExtension(fieldDescriptorProto, protoFile);
       }
 
       // handle extension ranges
-      // todo maybe latter on
+      // todo maybe later on
       for (DescriptorProtos.DescriptorProto.ExtensionRange extensionRange : descriptorProto.getExtensionRangeList()) {
         handleExtensionRange(extensionRange, protoFile); //todo not sure what "extension range" is for now
       }
     }
-    String name = protoFile.getName();
-    sourceStringBuilder.append("case class ").append(name); // todo possibly encapsulate this
+  }
+
+  private void handleClassDeclaration(DescriptorProtos.DescriptorProto descriptorProto) {
+    String className = descriptorProto.getName();
+    log.info("Generating class: " + className);
+    sourceStringBuilder.declareClass(className);
   }
 
   private void handleNestedType(SourceStringBuilder sourceStringBuilder, DescriptorProtos.DescriptorProto nestedType) {

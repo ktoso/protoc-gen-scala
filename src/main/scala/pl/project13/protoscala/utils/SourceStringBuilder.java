@@ -202,63 +202,21 @@ public class SourceStringBuilder {
     stringBuilder.ensureCapacity(minimumCapacity);
   }
 
-  public void trimToSize() {
-    stringBuilder.trimToSize();
-  }
-
-  public void setLength(int newLength) {
-    stringBuilder.setLength(newLength);
-  }
-
-  public char charAt(int index) {
-    return stringBuilder.charAt(index);
-  }
-
-  public int codePointAt(int index) {
-    return stringBuilder.codePointAt(index);
-  }
-
-  public int codePointBefore(int index) {
-    return stringBuilder.codePointBefore(index);
-  }
-
-  public int codePointCount(int beginIndex, int endIndex) {
-    return stringBuilder.codePointCount(beginIndex, endIndex);
-  }
-
-  public int offsetByCodePoints(int index, int codePointOffset) {
-    return stringBuilder.offsetByCodePoints(index, codePointOffset);
-  }
-
-  public void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin) {
-    stringBuilder.getChars(srcBegin, srcEnd, dst, dstBegin);
-  }
-
-  public void setCharAt(int index, char ch) {
-    stringBuilder.setCharAt(index, ch);
-  }
-
-  public String substring(int start) {
-    return stringBuilder.substring(start);
-  }
-
-  public CharSequence subSequence(int start, int end) {
-    return stringBuilder.subSequence(start, end);
-  }
-
-  public String substring(int start, int end) {
-    return stringBuilder.substring(start, end);
-  }
+  // functionality dedicated methods
 
   public SourceStringBuilder declarePackage(String javaPackage) {
-    stringBuilder.append(K_PACKAGE).append(javaPackage);
+    append(K_PACKAGE).append(javaPackage);
     appendNewLines(2);
     return this;
   }
 
   public SourceStringBuilder declareClass(String className) {
-    stringBuilder.append(K_CASE_CLASS).append(className);
-    return this;
+    return append(K_CASE_CLASS).append(className).append("(").append("\n").
+        appendInsertionPoint(className + "-params");
+  }
+
+  private SourceStringBuilder appendInsertionPoint(String insertionPointName) {
+    return append("// @@protoc_insertion_point(").append(insertionPointName).append(")");
   }
 
   private SourceStringBuilder appendNewLines(Integer numberOfNewLines) {
