@@ -270,7 +270,7 @@ public class SourceStringBuilder {
   private String indentationSpaces() {
     StringBuilder sb = new StringBuilder(indentation);
     // todo this sucks!!!!
-    for (int i = 1; i < indentation; i++) {
+    for (int i = 0; i < indentation; i++) {
       sb.append(" ");
     }
     return sb.toString();
