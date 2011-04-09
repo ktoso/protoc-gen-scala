@@ -79,7 +79,6 @@ public class ScalaProtoBufPluginInJava {
   private void handleDependencies(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     // todo that's most probably wrong ;-)
     for (String dependency : protoFile.getDependencyList()) {
-      log.info("Add dependency + " + dependency);
       sourceStringBuilder.importThe(dependency);
     }
   }
@@ -122,7 +121,6 @@ public class ScalaProtoBufPluginInJava {
 
   private void handleClassDeclaration(DescriptorProtos.DescriptorProto descriptorProto, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     String className = descriptorProto.getName();
-    log.info("Generating class: " + className);
 
     // handle all fields
     List<String> params = handleFields(descriptorProto.getFieldList());

@@ -16,8 +16,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4284cb17-36ce-4fc6-b13b-4c12ec165d1c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" afterPath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala" afterPath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java" afterPath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/proto/test/test.proto" afterPath="$PROJECT_DIR$/src/test/proto/test/test.proto" />
     </list>
     <ignored path="akka-and-protobuf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,94 +76,93 @@
     <favorites_list name="akka-and-protobuf" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MessageFieldGenerator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/MessageFieldGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScalaProtoBufPluginInJava.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="31" selection-start="4918" selection-end="4918" vertical-scroll-proportion="-5.52">
-              <folding>
-                <element signature="docComment;method#handleFields#0;class#ScalaProtoBufPluginInJava#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentsGenerator.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SourceStringBuilder.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="238" column="14" selection-start="6093" selection-end="6093" vertical-scroll-proportion="0.4124424">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;field#indentation#0;class#SourceStringBuilder#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.proto.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/scala/test/test.proto.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="28" selection-start="177" selection-end="190" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="55" selection-start="1580" selection-end="1580" vertical-scroll-proportion="-22.48">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.proto" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/proto/test/test.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="runExample.sh" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/runExample.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="16" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProtocGenScalaProject.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/build/ProtocGenScalaProject.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="17" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.75343406">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="MessageFieldGenerator.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/MessageFieldGenerator.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="7" column="13" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ScalaProtoBufPluginInJava.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="114" column="85" selection-start="4247" selection-end="4247" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="docComment;method#handleFields#0;class#ScalaProtoBufPluginInJava#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CommentsGenerator.scala" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="12" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SourceStringBuilder.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="32" column="46" selection-start="826" selection-end="826" vertical-scroll-proportion="0.44930875">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="docComment;field#indentation#0;class#SourceStringBuilder#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/build.gradle">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="61" column="55" selection-start="1580" selection-end="1580" vertical-scroll-proportion="-22.48">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.proto" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/proto/test/test.proto">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="8" column="34" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="runExample.sh" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/runExample.sh">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="16" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="test.proto.scala" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/out/scala/test/test.proto.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -177,7 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/ScalaNameMangler.scala" />
         <option value="$PROJECT_DIR$/project/build/Project.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/pl/project13/protoscala/EndToEndTestScala.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufCodeGenerator.scala" />
@@ -190,8 +188,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/runExample.sh" />
         <option value="$PROJECT_DIR$/project/build/ProtocGenScalaProject.scala" />
         <option value="$PROJECT_DIR$/src/test/java/pl/project13/protoscala/MainRunnerTest.java" />
-        <option value="$PROJECT_DIR$/out/scala/test/test.proto.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" />
+        <option value="$PROJECT_DIR$/out/scala/test/test.proto.scala" />
+        <option value="$PROJECT_DIR$/src/test/proto/test/test.proto" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java" />
       </list>
     </option>
@@ -912,7 +911,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup with SourceStringBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="compilation error fix" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -926,6 +925,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="cleanup with SourceStringBuilder" />
+    <MESSAGE value="compilation error fix" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1022,30 +1022,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/build/ProtocGenScalaProject.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/google/protobuf/compiler/Plugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="56" selection-start="581" selection-end="581" vertical-scroll-proportion="-0.6666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/runExample.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="16" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/proto/test/test.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1066,13 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/scala/test/test.proto.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="28" selection-start="177" selection-end="190" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" />
@@ -1080,16 +1052,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="31" selection-start="4918" selection-end="4918" vertical-scroll-proportion="-5.52">
+        <state line="114" column="85" selection-start="4247" selection-end="4247" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="docComment;method#handleFields#0;class#ScalaProtoBufPluginInJava#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/scala/test/test.proto.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/build/ProtocGenScalaProject.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="79" selection-start="266" selection-end="266" vertical-scroll-proportion="0.13824885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/runExample.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="16" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/proto/test/test.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="34" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="238" column="14" selection-start="6093" selection-end="6093" vertical-scroll-proportion="0.4124424">
+        <state line="32" column="46" selection-start="826" selection-end="826" vertical-scroll-proportion="0.44930875">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;field#indentation#0;class#SourceStringBuilder#0" expanded="false" />

@@ -25,8 +25,10 @@ public class SourceStringBuilder {
   private Integer indentation = 0;
 
   // keywords etc
-  private String K_PACKAGE    = "package ";
-  private String K_CASE_CLASS = "case class ";
+  private final String K_PACKAGE    = "package ";
+  private final String K_CASE_CLASS = "case class ";
+
+  private final String LINE_COMMENT = "// ";
 
   public SourceStringBuilder newLine() {
     stringBuilder.append("\n");
@@ -34,28 +36,33 @@ public class SourceStringBuilder {
   }
 
   public SourceStringBuilder appendComment(Object str) {
-    stringBuilder.append("// ").append(str);
+    indentation += str.toString().length() + LINE_COMMENT.length();
+    stringBuilder.append(LINE_COMMENT).append(str);
     return this;
   }
 
   // delegates ----------------------------------------------------------------
 
   public SourceStringBuilder append(Object obj) {
+    indentation += obj.toString().length();
     stringBuilder.append(obj);
     return this;
   }
 
   public SourceStringBuilder append(String str) {
+    indentation += str.length();
     stringBuilder.append(str);
     return this;
   }
 
   public SourceStringBuilder append(StringBuffer sb) {
+    indentation += sb.toString().length();
     stringBuilder.append(sb);
     return this;
   }
 
   public SourceStringBuilder append(CharSequence s) {
+    indentation += s.length();
     stringBuilder.append(s);
     return this;
   }
@@ -231,8 +238,11 @@ public class SourceStringBuilder {
   }
 
   public SourceStringBuilder declareCaseClass(String className, List<String> params) {
+    log.info("Declaring class: " + className + " with " + params.size() + " fields...");
+
     append(K_CASE_CLASS).append(className).append("(");
 
+    // todo refactor me to something that is more expressive
     String preparedParams = Joiner.on("," + indentationSpaces() + "\n").join(params);
     append(preparedParams);
     newLine();
@@ -266,6 +276,8 @@ public class SourceStringBuilder {
   }
 
   public SourceStringBuilder importThe(String dependency) {
+    log.info("New import: " + dependency);
+
     return append("import ").append(dependency).newLine();
   }
 }

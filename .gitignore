@@ -13,6 +13,7 @@ doc
 dist
 build
 .gradle
+.idea
 
 # temp files
 *.tmp
