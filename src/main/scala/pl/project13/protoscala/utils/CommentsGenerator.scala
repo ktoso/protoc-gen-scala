@@ -19,6 +19,6 @@ class CommentsGenerator {
     for (initialComment <- initialComments) {
       sourceStringBuilder.appendComment(initialComment.format(name))
     }
-    sourceStringBuilder.appendNewLine
+    sourceStringBuilder.newLine
   }
 }
