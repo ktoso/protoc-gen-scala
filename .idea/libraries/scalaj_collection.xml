@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="scalaj-collection">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib_managed/scala_2.8.0/compile/scalaj-collection_2.8.0-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

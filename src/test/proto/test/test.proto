@@ -9,8 +9,9 @@ option java_package = "pl.project13.test";
 
 message Person {
     required string name = 1;
-    required int32 id = 2;
-    optional string email = 3;
+    required string surname = 2;
+    required int32 id = 3;
+    optional string email = 4;
 
     enum PhoneType {
         MOBILE = 0;
@@ -23,5 +24,5 @@ message Person {
         optional PhoneType type = 2 [default = HOME];
     }
 
-    repeated PhoneNumber phone = 4;
+    repeated PhoneNumber phone = 5;
 }
