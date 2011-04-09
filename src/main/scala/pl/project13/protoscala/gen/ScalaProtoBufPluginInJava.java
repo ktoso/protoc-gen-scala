@@ -142,7 +142,7 @@ public class ScalaProtoBufPluginInJava {
     //todo handle me (use *FieldGenerator)
   }
 
-  private void handleEnumType(DescriptorProtos.EnumDescriptorProto enum, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
+  private void handleEnumType(DescriptorProtos.EnumDescriptorProto enumDesc, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     //todo handle me (use *FieldGenerator)
   }
 

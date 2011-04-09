@@ -231,8 +231,7 @@ public class SourceStringBuilder {
   }
 
   public SourceStringBuilder declareCaseClass(String className, List<String> params) {
-    append(K_CASE_CLASS).append(className).append("(").rememberIndent();
-    newLine();
+    append(K_CASE_CLASS).append(className).append("(");
 
     String preparedParams = Joiner.on("," + indentationSpaces() + "\n").join(params);
     append(preparedParams);
@@ -251,10 +250,6 @@ public class SourceStringBuilder {
       sb.append(" ");
     }
     return sb.toString();
-  }
-
-  private void rememberIndent() {
-    stringBuilder.
   }
 
   private SourceStringBuilder insertionPoint(String insertionPointName) {
