@@ -31,8 +31,12 @@ public class SourceStringBuilder {
   private final String LINE_COMMENT = "// ";
 
   public SourceStringBuilder newLine() {
-    stringBuilder.append("\n");
-    return this;
+    indentation = 0;
+    return newLineKeepingIndent();
+  }
+
+  private SourceStringBuilder newLineKeepingIndent() {
+    return append("\n");
   }
 
   public SourceStringBuilder appendComment(Object str) {
@@ -243,20 +247,30 @@ public class SourceStringBuilder {
     append(K_CASE_CLASS).append(className).append("(");
 
     // todo refactor me to something that is more expressive
-    String preparedParams = Joiner.on("," + indentationSpaces() + "\n").join(params);
-    append(preparedParams);
-    newLine();
+    String preparedParams = Joiner.on(",\n" + indentationSpaces()).join(params);
+    appendKeepingIndent(preparedParams);
+    newLineKeepingIndent();
 
     insertionPoint(className + "-params"); //todo externalize
-    append(")");
+    appendIndented(")");
 
     return this;
+  }
+
+  private void appendKeepingIndent(String str) {
+    Integer rememberedIndent = indentation;
+    append(str);
+    indentation = rememberedIndent;
+  }
+
+  private SourceStringBuilder appendIndented(String str) {
+    return append(indentationSpaces() + str);
   }
 
   private String indentationSpaces() {
     StringBuilder sb = new StringBuilder(indentation);
     // todo this sucks!!!!
-    for (int i = 0; i < indentation; i++) {
+    for (int i = 1; i < indentation; i++) {
       sb.append(" ");
     }
     return sb.toString();
@@ -265,7 +279,7 @@ public class SourceStringBuilder {
   private SourceStringBuilder insertionPoint(String insertionPointName) {
     log.info("New insertion point: " + insertionPointName);
 
-    return append("// @@protoc_insertion_point(").append(insertionPointName).append(")").newLine();
+    return appendIndented("// @@protoc_insertion_point(").append(insertionPointName).append(")").newLine();
   }
 
   private SourceStringBuilder appendNewLines(Integer numberOfNewLines) {
@@ -278,6 +292,14 @@ public class SourceStringBuilder {
   public SourceStringBuilder importThe(String dependency) {
     log.info("New import: " + dependency);
 
-    return append("import ").append(dependency).newLine();
+    return appendLine("import ").append(dependency);
+  }
+
+  public SourceStringBuilder appendLine(String str) {
+    return append(str).newLine();
+  }
+
+  public SourceStringBuilder appendLineKeepingIndent(String str) {
+    return append(str).newLineKeepingIndent();
   }
 }

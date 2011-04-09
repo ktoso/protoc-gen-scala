@@ -15,9 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4284cb17-36ce-4fc6-b13b-4c12ec165d1c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/TypeConverter.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" afterPath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java" afterPath="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/proto/test/test.proto" afterPath="$PROJECT_DIR$/src/test/proto/test/test.proto" />
     </list>
     <ignored path="akka-and-protobuf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,7 +76,7 @@
     <favorites_list name="akka-and-protobuf" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.75343406">
+    <splitter split-orientation="horizontal" split-proportion="0.6380494">
       <split-first>
         <leaf>
           <file leaf-file-name="MessageFieldGenerator.java" pinned="false" current="false" current-in-tab="false">
@@ -91,10 +91,19 @@
           <file leaf-file-name="ScalaProtoBufPluginInJava.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="114" column="85" selection-start="4247" selection-end="4247" vertical-scroll-proportion="0.0">
+                <state line="162" column="73" selection-start="6398" selection-end="6398" vertical-scroll-proportion="0.0">
                   <folding>
                     <element signature="docComment;method#handleFields#0;class#ScalaProtoBufPluginInJava#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TypeConverter.scala" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/TypeConverter.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="19" column="58" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -108,10 +117,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SourceStringBuilder.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="SourceStringBuilder.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="46" selection-start="826" selection-end="826" vertical-scroll-proportion="0.44930875">
+                <state line="272" column="18" selection-start="7121" selection-end="7121" vertical-scroll-proportion="0.32603687">
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="docComment;field#indentation#0;class#SourceStringBuilder#0" expanded="false" />
@@ -151,10 +160,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="test.proto.scala" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="test.proto.scala" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/out/scala/test/test.proto.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="11" column="13" selection-start="355" selection-end="355" vertical-scroll-proportion="0.1860203">
                   <folding />
                 </state>
               </provider>
@@ -176,9 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/project/build/Project.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/pl/project13/protoscala/EndToEndTestScala.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufCodeGenerator.scala" />
         <option value="$PROJECT_DIR$/src/main/java/google/protobuf/compiler/Plugin.java" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/CommentsGenerator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/RepeatedFieldGenerator.java" />
@@ -188,9 +194,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/runExample.sh" />
         <option value="$PROJECT_DIR$/project/build/ProtocGenScalaProject.scala" />
         <option value="$PROJECT_DIR$/src/test/java/pl/project13/protoscala/MainRunnerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/proto/test/test.proto" />
+        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/TypeConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/TypeConversions.java" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java" />
         <option value="$PROJECT_DIR$/out/scala/test/test.proto.scala" />
-        <option value="$PROJECT_DIR$/src/test/proto/test/test.proto" />
+        <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/TypeConverter.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java" />
       </list>
     </option>
@@ -633,8 +642,8 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="pl.project13.protoscala.utils" />
       <recent name="pl.project13.protoscala.gen" />
+      <recent name="pl.project13.protoscala.utils" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pl.project13.protoscala.utils" />
@@ -988,16 +997,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/proto/google/protobuf/descriptor.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/ScalaNameMangler.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="81" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/google/protobuf/DescriptorProtos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="572" column="14" selection-start="21907" selection-end="21907" vertical-scroll-proportion="0.33333334" />
@@ -1050,22 +1049,6 @@
         <state line="12" column="16" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="85" selection-start="4247" selection-end="4247" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;method#handleFields#0;class#ScalaProtoBufPluginInJava#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/scala/test/test.proto.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/build/ProtocGenScalaProject.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="79" selection-start="266" selection-end="266" vertical-scroll-proportion="0.13824885">
@@ -1087,13 +1070,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/TypeConverter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="58" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/gen/ScalaProtoBufPluginInJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="73" selection-start="6398" selection-end="6398" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="docComment;method#handleFields#0;class#ScalaProtoBufPluginInJava#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/pl/project13/protoscala/utils/SourceStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="46" selection-start="826" selection-end="826" vertical-scroll-proportion="0.44930875">
+        <state line="272" column="18" selection-start="7121" selection-end="7121" vertical-scroll-proportion="0.32603687">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;field#indentation#0;class#SourceStringBuilder#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/scala/test/test.proto.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="355" selection-end="355" vertical-scroll-proportion="0.1860203">
+          <folding />
         </state>
       </provider>
     </entry>

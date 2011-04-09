@@ -5,6 +5,7 @@ import google.protobuf.compiler.Plugin;
 import pl.project13.protoscala.utils.CommentsGenerator;
 import pl.project13.protoscala.utils.ScalaNameMangler;
 import pl.project13.protoscala.utils.SourceStringBuilder;
+import pl.project13.protoscala.utils.TypeConverter;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -154,13 +155,20 @@ public class ScalaProtoBufPluginInJava {
   // todo this will look good rewritten in scala :d
   private List<String> handleFields(List<DescriptorProtos.FieldDescriptorProto> fieldList) {
     List<String> params = newArrayList();
+
     for (DescriptorProtos.FieldDescriptorProto field : fieldList) {
       String fieldName = field.getName();
-      String typeName = field.getTypeName();
+      String protoBufTypeName = field.getType().name();
+
+      String typeName = TypeConverter.asScalaType(protoBufTypeName, field);
+
+      log.info(String.format("Preparing field: '%s', of Type: '%s'", fieldName, typeName));
 
       String parameter;
       if (field.hasDefaultValue()) {
         String defaultValue = field.getDefaultValue();
+        log.info(String.format("Field: '%s', will have the default value of: '%s'", fieldName, defaultValue));
+
         parameter = parameterDefinition(fieldName, typeName, defaultValue);
       } else {
         parameter = parameterDefinition(fieldName, typeName);
