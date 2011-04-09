@@ -8,130 +8,165 @@ package pl.project13.protoscala.utils;
 public class SourceStringBuilder {
   private StringBuilder stringBuilder = new StringBuilder();
 
-  public StringBuilder appendNewLine() {
-    return stringBuilder.append("\n");
+  // keywords etc
+  private String K_PACKAGE    = "package ";
+  private String K_CASE_CLASS = "case class ";
+
+  public SourceStringBuilder appendNewLine() {
+    stringBuilder.append("\n");
+    return this;
   }
 
-  public StringBuilder appendComment(Object str){
-    return stringBuilder.append("// ").append(str);
+  public SourceStringBuilder appendComment(Object str) {
+    stringBuilder.append("// ").append(str);
+    return this;
   }
 
   // delegates ----------------------------------------------------------------
 
-  public StringBuilder append(Object obj) {
-    return stringBuilder.append(obj);
+  public SourceStringBuilder append(Object obj) {
+    stringBuilder.append(obj);
+    return this;
   }
 
-  public StringBuilder append(String str) {
-    return stringBuilder.append(str);
+  public SourceStringBuilder append(String str) {
+    stringBuilder.append(str);
+    return this;
   }
 
-  public StringBuilder append(StringBuffer sb) {
-    return stringBuilder.append(sb);
+  public SourceStringBuilder append(StringBuffer sb) {
+    stringBuilder.append(sb);
+    return this;
   }
 
-  public StringBuilder append(CharSequence s) {
-    return stringBuilder.append(s);
+  public SourceStringBuilder append(CharSequence s) {
+    stringBuilder.append(s);
+    return this;
   }
 
-  public StringBuilder append(CharSequence s, int start, int end) {
-    return stringBuilder.append(s, start, end);
+  public SourceStringBuilder append(CharSequence s, int start, int end) {
+    stringBuilder.append(s, start, end);
+    return this;
   }
 
-  public StringBuilder append(char[] str) {
-    return stringBuilder.append(str);
+  public SourceStringBuilder append(char[] str) {
+    stringBuilder.append(str);
+    return this;
   }
 
-  public StringBuilder append(char[] str, int offset, int len) {
-    return stringBuilder.append(str, offset, len);
+  public SourceStringBuilder append(char[] str, int offset, int len) {
+    stringBuilder.append(str, offset, len);
+    return this;
   }
 
-  public StringBuilder append(boolean b) {
-    return stringBuilder.append(b);
+  public SourceStringBuilder append(boolean b) {
+    stringBuilder.append(b);
+    return this;
   }
 
-  public StringBuilder append(char c) {
-    return stringBuilder.append(c);
+  public SourceStringBuilder append(char c) {
+    stringBuilder.append(c);
+    return this;
   }
 
-  public StringBuilder append(int i) {
-    return stringBuilder.append(i);
+  public SourceStringBuilder append(int i) {
+    stringBuilder.append(i);
+    return this;
   }
 
-  public StringBuilder append(long lng) {
-    return stringBuilder.append(lng);
+  public SourceStringBuilder append(long lng) {
+    stringBuilder.append(lng);
+    return this;
   }
 
-  public StringBuilder append(float f) {
-    return stringBuilder.append(f);
+  public SourceStringBuilder append(float f) {
+    stringBuilder.append(f);
+    return this;
   }
 
-  public StringBuilder append(double d) {
-    return stringBuilder.append(d);
+  public SourceStringBuilder append(double d) {
+    stringBuilder.append(d);
+    return this;
   }
 
-  public StringBuilder appendCodePoint(int codePoint) {
-    return stringBuilder.appendCodePoint(codePoint);
+  public SourceStringBuilder appendCodePoint(int codePoint) {
+    stringBuilder.appendCodePoint(codePoint);
+    return this;
   }
 
-  public StringBuilder delete(int start, int end) {
-    return stringBuilder.delete(start, end);
+  public SourceStringBuilder delete(int start, int end) {
+    stringBuilder.delete(start, end);
+    return this;
   }
 
-  public StringBuilder deleteCharAt(int index) {
-    return stringBuilder.deleteCharAt(index);
+  public SourceStringBuilder deleteCharAt(int index) {
+    stringBuilder.deleteCharAt(index);
+    return this;
   }
 
-  public StringBuilder replace(int start, int end, String str) {
-    return stringBuilder.replace(start, end, str);
+  public SourceStringBuilder replace(int start, int end, String str) {
+    stringBuilder.replace(start, end, str);
+    return this;
   }
 
-  public StringBuilder insert(int index, char[] str, int offset, int len) {
-    return stringBuilder.insert(index, str, offset, len);
+  public SourceStringBuilder insert(int index, char[] str, int offset, int len) {
+    stringBuilder.insert(index, str, offset, len);
+    return this;
   }
 
-  public StringBuilder insert(int offset, Object obj) {
-    return stringBuilder.insert(offset, obj);
+  public SourceStringBuilder insert(int offset, Object obj) {
+    stringBuilder.insert(offset, obj);
+    return this;
   }
 
-  public StringBuilder insert(int offset, String str) {
-    return stringBuilder.insert(offset, str);
+  public SourceStringBuilder insert(int offset, String str) {
+    stringBuilder.insert(offset, str);
+    return this;
   }
 
-  public StringBuilder insert(int offset, char[] str) {
-    return stringBuilder.insert(offset, str);
+  public SourceStringBuilder insert(int offset, char[] str) {
+    stringBuilder.insert(offset, str);
+    return this;
   }
 
-  public StringBuilder insert(int dstOffset, CharSequence s) {
-    return stringBuilder.insert(dstOffset, s);
+  public SourceStringBuilder insert(int dstOffset, CharSequence s) {
+    stringBuilder.insert(dstOffset, s);
+    return this;
   }
 
-  public StringBuilder insert(int dstOffset, CharSequence s, int start, int end) {
-    return stringBuilder.insert(dstOffset, s, start, end);
+  public SourceStringBuilder insert(int dstOffset, CharSequence s, int start, int end) {
+    stringBuilder.insert(dstOffset, s, start, end);
+    return this;
   }
 
-  public StringBuilder insert(int offset, boolean b) {
-    return stringBuilder.insert(offset, b);
+  public SourceStringBuilder insert(int offset, boolean b) {
+    stringBuilder.insert(offset, b);
+    return this;
   }
 
-  public StringBuilder insert(int offset, char c) {
-    return stringBuilder.insert(offset, c);
+  public SourceStringBuilder insert(int offset, char c) {
+    stringBuilder.insert(offset, c);
+    return this;
   }
 
-  public StringBuilder insert(int offset, int i) {
-    return stringBuilder.insert(offset, i);
+  public SourceStringBuilder insert(int offset, int i) {
+    stringBuilder.insert(offset, i);
+    return this;
   }
 
-  public StringBuilder insert(int offset, long l) {
-    return stringBuilder.insert(offset, l);
+  public SourceStringBuilder insert(int offset, long l) {
+    stringBuilder.insert(offset, l);
+    return this;
   }
 
-  public StringBuilder insert(int offset, float f) {
-    return stringBuilder.insert(offset, f);
+  public SourceStringBuilder insert(int offset, float f) {
+    stringBuilder.insert(offset, f);
+    return this;
   }
 
-  public StringBuilder insert(int offset, double d) {
-    return stringBuilder.insert(offset, d);
+  public SourceStringBuilder insert(int offset, double d) {
+    stringBuilder.insert(offset, d);
+    return this;
   }
 
   public int indexOf(String str) {
@@ -148,10 +183,6 @@ public class SourceStringBuilder {
 
   public int lastIndexOf(String str, int fromIndex) {
     return stringBuilder.lastIndexOf(str, fromIndex);
-  }
-
-  public StringBuilder reverse() {
-    return stringBuilder.reverse();
   }
 
   @Override
@@ -217,5 +248,23 @@ public class SourceStringBuilder {
 
   public String substring(int start, int end) {
     return stringBuilder.substring(start, end);
+  }
+
+  public SourceStringBuilder declarePackage(String javaPackage) {
+    stringBuilder.append(K_PACKAGE).append(javaPackage);
+    appendNewLines(2);
+    return this;
+  }
+
+  public SourceStringBuilder declareClass(String className) {
+    stringBuilder.append(K_CASE_CLASS).append(className);
+    return this;
+  }
+
+  private SourceStringBuilder appendNewLines(Integer numberOfNewLines) {
+    for (int i = 0; i < numberOfNewLines; i++) {
+      appendNewLine();
+    }
+    return this;
   }
 }

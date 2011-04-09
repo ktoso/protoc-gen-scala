@@ -24,12 +24,6 @@ public class MainRunner {
   }
 
   public void run() throws IOException {
-//    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-//    while(reader.ready()){
-//      String line = reader.readLine();
-//      System.out.println(line);
-//    }
-
     Plugin.CodeGeneratorRequest codeGeneratorRequest = Plugin.CodeGeneratorRequest.parseFrom(in);
 
     Plugin.CodeGeneratorResponse codeGeneratorResponse = scalaProtoBufPlugin.handle(codeGeneratorRequest);
@@ -38,17 +32,14 @@ public class MainRunner {
     out.flush();
   }
 
-  @VisibleForTesting
   void setScalaProtoBufPlugin(ScalaProtoBufPluginInJava scalaProtoBufPlugin) {
     this.scalaProtoBufPlugin = scalaProtoBufPlugin;
   }
 
-  @VisibleForTesting
   void setIn(InputStream in) {
     this.in = in;
   }
 
-  @VisibleForTesting
   void setOut(OutputStream out) {
     this.out = out;
   }

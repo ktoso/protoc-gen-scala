@@ -22,6 +22,10 @@ public class ScalaProtoBufPluginInJava {
   private ScalaNameMangler  nameManglerNameMangler = new ScalaNameMangler();
   private CommentsGenerator commentsGenerator      = new CommentsGenerator();
 
+  // code generators
+  private MessageFieldGenerator  messageFieldGenerator;
+  private RepeatedFieldGenerator repeatedFieldGenerator;
+
   public Plugin.CodeGeneratorResponse handle(Plugin.CodeGeneratorRequest request) {
     Plugin.CodeGeneratorResponse.Builder responseBuilder = Plugin.CodeGeneratorResponse.newBuilder();
 
@@ -51,15 +55,18 @@ public class ScalaProtoBufPluginInJava {
 
     handleClassBody(protoFile);
 
-    fileBuilder.setContent(sourceStringBuilder.toString());
-    fileBuilder.setName(nameManglerNameMangler.escapeFileName("TestFile"));
+    String fileName = nameManglerNameMangler.escapeFileName(protoFile.getName());
+    fileBuilder.setName(fileName);
+
+    String sourceCode = sourceStringBuilder.toString();
+    fileBuilder.setContent(sourceCode);
 
     responseBuilder.addFile(fileBuilder);
   }
 
   private void handlePackage(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     String javaPackage = protoFile.getOptions().getJavaPackage();
-    sourceStringBuilder.append("package ").append(javaPackage);
+    sourceStringBuilder.declarePackage(javaPackage);
   }
 
   private void handleComments(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
@@ -75,12 +82,15 @@ public class ScalaProtoBufPluginInJava {
   }
 
   /**
-   *   todo this will have a better architecture (a waaaay batter one, I'm just looking at what we have to code against :-))
+   * todo this will have a better architecture (a waaaay batter one, I'm just looking at what we have to code against :-))
    */
   private void handleClassBody(DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
     //todo fix this, inner loops suck
 
     for (DescriptorProtos.DescriptorProto descriptorProto : protoFile.getMessageTypeList()) {
+
+      sourceStringBuilder.append("case class ").append(descriptorProto.getName()).append("()");
+
       // handle all fields
       for (DescriptorProtos.FieldDescriptorProto fieldDescriptorProto : descriptorProto.getFieldList()) {
         handleField(fieldDescriptorProto, protoFile);
@@ -130,7 +140,7 @@ public class ScalaProtoBufPluginInJava {
   }
 
   private void handleField(DescriptorProtos.FieldDescriptorProto fieldDescriptorProto, DescriptorProtos.FileDescriptorProtoOrBuilder protoFile) {
-    //todo handle me (use *FieldGenerator)
+    fieldDescriptorProto.getDefaultValue();
   }
 
 }
