@@ -22,5 +22,3 @@ It's currently using Gradle but I've been checking out *sbt* and will most likel
 Tips for myself
 ---------------
 The project is likely to follw the outline as designed by <a href="http://code.google.com/p/protobuf-gwt/source/browse/trunk/protoc-gen-gwt/src/net/ltgt/gwt/protobuf/compiler/Main.java?r=15"> this link</a> from now on.
-
-
