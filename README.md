@@ -13,7 +13,7 @@ The path may change as I'm working on full package = path support etc etc... :-)
 
 Why?
 ----
-This project was suggested as Summer of Code 2011 Idea and I really liked it and started coding right away :-)
+This project was suggested as Summer of Code 2011 Idea but I somehow got to decline working on it for GSoC, but still did continue it as a student project :-)
 I'm also learning Scala along the way. The app will be rewritten to *pure scala* later on. Not now because exploring types in intellij 
 still is kind of better in java than scala and it helps a lot when looking for "where do I get this info from?".
 
